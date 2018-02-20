@@ -1,4 +1,7 @@
 ﻿using System;
+
+using Microsoft.Azure.Devices.Client;
+
 using uPLibrary.Networking.M2Mqtt;
 using uPLibrary.Networking.M2Mqtt.Messages;
 
@@ -7,6 +10,7 @@ namespace BC2AzureIoTHub
     class Program
     {
         private static MqttClient _mqttClient = new MqttClient("localhost");
+        private static DeviceClient _deviceClient = null;
 
         static void Main(string[] args)
         {
