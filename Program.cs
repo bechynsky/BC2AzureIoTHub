@@ -57,7 +57,7 @@ namespace BC2AzureIoTHub
             string key = topicParts[4];
             string value = System.Text.Encoding.Default.GetString(e.Message);
 
-            string data = "{'" + key + "':" + value + "}";
+            string data = $"{{\"key\":\"{key}\",\"value\":{value}}}"; 
             Message payload = new Message(System.Text.Encoding.UTF8.GetBytes(data));
             await _deviceClient.SendEventAsync(payload);
 
