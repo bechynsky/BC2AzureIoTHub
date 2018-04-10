@@ -1,5 +1,5 @@
 # BC2AzureIoTHub
-SImple Field Gateway reading data from MQTT broker connected to BigClown USB Dongle.
+Simple Field Gateway reading data from MQTT broker connected to BigClown USB Dongle.
 
 # iot-hub explorer
 
