@@ -59,10 +59,10 @@ namespace BC2AzureIoTHub
             string value = System.Text.Encoding.Default.GetString(e.Message);
 
             string data = $"{{\"device\":\"{device}\",\"key\":\"{key}\",\"value\":{value}}}"; 
+            Console.WriteLine(data);
             Message payload = new Message(System.Text.Encoding.UTF8.GetBytes(data));
             await _deviceClient.SendEventAsync(payload);
-
-            Console.WriteLine(data);            
+            Console.WriteLine("Send");                        
         }  
     }
 }
